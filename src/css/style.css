@@ -9,7 +9,7 @@
     position: fixed;
     top: 0;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
     background-color: rgb(1, 152, 172);
     width: 100%;
 }
@@ -21,11 +21,12 @@
 }
 
 .gallery {
-    width: 100%;
     display: flex;
+    margin: 100px auto 5px;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 100px auto 0;
+    
 }
 
 .img-item {
@@ -60,7 +61,7 @@
     cursor: pointer;
 }
 
-a {
+.link {
     margin: 10px auto;
     flex-basis: calc(20% - 20px);
     text-decoration: none;

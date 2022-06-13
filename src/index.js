@@ -25,12 +25,13 @@ loadMoreBtn.classList.add('is-hidden');
 function onSubmit(e) {
 
 e.preventDefault();
-    
+
 gallery.innerHTML = '';
   
 PhotosApi.query = e.currentTarget.elements.searchQuery.value.trim();
     
   if (!PhotosApi.query) {
+    loadMoreBtn.classList.add('is-hidden');
     Notiflix.Notify.warning('Fill this input, please!');
     return;
   }

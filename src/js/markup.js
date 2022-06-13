@@ -5,7 +5,7 @@ function renderMarkup(images) {
     .map(image => {
       const { id, webformatURL, largeImageURL, tags, likes, views, comments, downloads } = image;
       return `
-          <a href="${largeImageURL}">
+          <a class="link" href="${largeImageURL}">
           <div id="${id}">
             <img src="${webformatURL}" alt="${tags}" loading="lazy" class="img-item"/>
             <div class="container">
