@@ -1,5 +1,4 @@
 const form = document.querySelector('.search-form');
-console.log(form)
 const gallery = document.querySelector('.gallery');
 const loadMoreBtn = document.querySelector('.load-more');
 

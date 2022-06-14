@@ -1,6 +1,6 @@
 import { gallery } from './refs';
 
-function renderMarkup(images) {
+export const renderMarkup = images => {
   const markup = images
     .map(image => {
       const { id, webformatURL, largeImageURL, tags, likes, views, comments, downloads } = image;
@@ -25,4 +25,3 @@ function renderMarkup(images) {
 function updateMarkup(markup = '') {
   gallery.insertAdjacentHTML('beforeend', markup);
 }
-export { renderMarkup };
