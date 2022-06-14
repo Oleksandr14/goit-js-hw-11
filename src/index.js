@@ -6,7 +6,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 import './css/style.css';
 
-import PhotosApi from './js/api';
+import ImagesApi from './js/api';
 
 import { form, gallery, loadMoreBtn } from './js/refs';
 
@@ -28,21 +28,21 @@ e.preventDefault();
 
 gallery.innerHTML = '';
   
-PhotosApi.query = e.currentTarget.elements.searchQuery.value.trim();
+ImagesApi.query = e.currentTarget.elements.searchQuery.value.trim();
     
-  if (!PhotosApi.query) {
+  if (!ImagesApi.query) {
     loadMoreBtn.classList.add('is-hidden');
     Notiflix.Notify.warning('Fill this input, please!');
     return;
   }
-  PhotosApi.resetPage();
+  ImagesApi.resetPage();
   getImg();
   form.reset();
   loadMoreBtn.classList.remove('is-hidden');
 }
 
 async function getImg() {
-  const data = await PhotosApi.fetchPhotos();
+  const data = await ImagesApi.fetchPhotos();
 
   if (!data.hits.length) {
     loadMoreBtn.classList.add('is-hidden');
